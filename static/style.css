@@ -1,0 +1,1110 @@
+/*
+    Project Name: Wearable Sensor Group 7: Neuropulse
+    Team Members: Om Agrawal, Derek Wang, Abhinav Kartik, Aaron Rogovoy
+    Date: 6/3/2024
+    Description: style.css is the main CSS file for the Neuropulse website. It contains all the styles for the project.
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+/* Declare variables (for colors) */
+:root {
+  --bg: #FEFAF2; /* Background color */
+  --dark: #194b60; /* Footer background color */
+
+  --medium: #53a7cb;        /* Button bg color */
+  --light: #8cdfe4;  /* Button bg hover color */
+  --navbar-height: 80px; /* Navigation bar height */
+}
+
+/* Reset types */
+  
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Set default font-family */
+
+body {
+  font-family: "DM Sans", sans-serif !important;
+  overflow-x: hidden;
+  background-color: var(--bg);
+}
+
+/* Main content for page */
+
+main {
+  background-color: var(--bg);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* ----------------------- Navigation bar ----------------------- */
+
+/* Navbar background color */
+
+.nb-background-color{
+  background-color: var(--bg);
+}
+
+/* Font size and spacing for navigation links */
+
+.nbMenuItem {
+  font-size: 1.1rem;
+  color: var(--medium);
+}
+
+/* Change the hamburger menu icon color */
+
+.navbar-toggler {
+  background-color: var(--medium);
+}
+
+/* Sign up button */
+
+.signup {
+  background-color: var(--medium);
+  color: white;
+  border-radius: 18px;
+}
+
+
+/* Hover effect for sign up button */
+.signup:hover {
+  background-color: var(--light);
+  color: var(--medium);
+}
+
+/* Navbar logo text*/
+.navbar-text {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--medium);
+  vertical-align: middle;
+  margin: 0;
+}
+
+/* Navbar items */
+.nav-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0.5rem;
+}
+
+/* Sign up button*/
+.btn.signup {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Navbar logo image */
+.nav-logo {
+  width: 50px;
+}
+
+/* Remove link underline */
+.link{
+  text-decoration: none;
+}
+
+/* Hover effect for navbar links */
+.navlink:hover {
+  color: var(--light);
+}
+
+/* ----------------------- Footer ----------------------- */
+
+/* Footer background color */
+footer{
+    background-color: var(--dark);
+    padding: 10px;
+    margin-top: auto;
+}
+
+.container .d-flex {
+  align-items: center;
+}
+
+.footer-text{
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #D4F0F2;
+  vertical-align: middle;
+  margin: 0;
+}
+
+.footer-logo{
+  width: 90px;
+}
+
+.w-max-content {
+  width: -moz-max-content;
+  width: max-content;
+}
+
+/* Footer links */
+
+footer li a {
+  color: rgba(255, 255, 255, 0.55);
+  text-decoration: none;
+  transition: color 250ms ease-out;
+}
+
+/* Hover effect for footer links */
+footer li a:hover {
+  color: rgba(255, 255, 255, 1);
+}
+
+/* ----------------------- Sign up and login page ----------------------- */
+
+/* Card that contains form inputs */
+.login-card {
+  background-color: #ffffff81;
+  border: 1px #d2d2d2 solid;
+  max-width: 450px;
+  border-radius: 1.5rem;
+}
+
+.login-card form p {
+  color: #00000085;
+  font-size: 0.85rem;
+}
+
+/* Form "Keep me signed in" text */
+.form-check-label {
+  font-size: 0.85rem;
+}
+
+/* ----------------------- About page ----------------------- */
+/* About page top box with mission statement color and formatting*/
+.top-box {
+  background-color: var(--dark);
+  padding: 2rem 15vw 0;
+  color: white;
+  text-align: center;
+}
+
+/* Arrow color for top box */
+a[href="#about-cards"] .arrow {
+  color: white !important; 
+}
+
+/* About navbar color */
+.about-navbar {
+  background-color: var(--dark);
+}
+
+/* Mission text color */
+.mission {
+  color: var(--light);
+}
+
+.team {
+  margin: 0;
+  padding: 0;
+}
+
+/* arrow size */
+.arrow {
+  font-size: 3rem;
+}
+
+/* About page cards */
+.about {
+  color: var(--medium);
+  border-radius: 20px;
+  margin-top: 1rem;
+  margin-bottom: 5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+/* About page card image */
+.cardimg {
+  width: 100%;
+  aspect-ratio: 4 / 3; /* Maintain aspect ratio */
+  object-fit: contain; /* the image contains within the container without cropping */
+  margin-top: 30px;
+}
+
+.card .row.no-gutters {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: stretch;
+}
+
+.card .col-md-4, .card .col-md-8 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* About page card body */
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.card {
+  height: 100%; /* Make all cards the same height */
+}
+
+.row.row-cols-1.row-cols-md-2.p-4 .col {
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1000px) {
+  .cardimg {
+    width: 100%;
+    aspect-ratio: 4 / 3; /* Maintain aspect ratio */
+    object-fit: contain; /* the image contains within the container without cropping */
+  }
+  
+  .card .row.no-gutters {
+    flex-direction: column;
+  }
+  
+  .card .col-md-4, .card .col-md-8 {
+    width: 100%; /* columns take full width */
+  }
+  
+  .card-body {
+    padding: 1rem;
+  }
+}
+/* ----------------------- Index page ----------------------- */
+
+/* Hero section margins*/
+.hero {
+  margin-bottom: 8rem;
+  margin-top: 2rem;
+}
+
+/* Dark text color */
+.text-one {
+  color: var(--dark);
+}
+
+/* Medium text color */
+.text-two {
+  color: var(--medium);
+}
+
+/* Light text color */
+.text-three {
+  color: var(--light);
+}
+
+/* Heading font */
+.heading {
+  font-family: 'Inter', sans-serif;
+  font-weight: bolder;
+  font-size: 2.5rem;
+}
+
+/* Subheading font */
+.subheading {
+  font-weight: bold;
+}
+
+/* Button colors */
+.btn-one {
+  background-color: var(--dark);
+}
+.btn-two {
+  background-color: var(--medium);
+}
+
+/* Button style and hover effect */
+.btn-a {
+  border-radius: 20px;
+  padding: 0.5rem 1rem;
+  margin: 1rem;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+.btn-a:hover {
+  background-color: var(--light);
+  color: white;
+}
+
+/* card and image round corners*/
+.card-round {
+  border-radius: 20px;
+}
+.img-round {
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+/* Product image size*/
+.product-img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Description font sizes */
+.description {
+  font-size: 1.5rem;
+}
+
+.description-two {
+  font-size: 1.3rem;
+}
+
+.info-section {
+  margin-bottom: 5rem;
+}
+
+/* Info section image sizes */
+.info-section .info-image {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  margin: 0 auto;
+}
+
+/* Info section image trapezoid cropping */
+.info-section .info-image.left {
+  clip-path: polygon(0 0, 100% 0, 80% 100%, 0% 100%);
+}
+
+.info-section .info-image.right {
+  clip-path: polygon(100% 0, 0% 0, 20% 100%, 100% 100%);
+}
+
+.info-section h1 {
+  color: var(--dark);
+  margin-bottom: 1rem;
+}
+
+.info-section p {
+  color: var(--medium);
+}
+
+/* Second card styles */
+.card-two {
+  background-color: #e3f2fd;
+  border-radius: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card-img-center {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  object-fit: contain;
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.card-text {
+  color: #333;
+}
+
+/* Hide tech circuit image on small screens */
+@media (max-width: 800px) {
+  .img-right {
+    display: none;
+  }
+
+  .hero .container .row {
+    flex-direction: column;
+  }
+
+  .col-sm-6.d-flex {
+    width: 100%;
+  }
+}
+
+/* Turn trapezoid images back to rectangles earlier */
+@media (max-width: 992px) {
+  .info-section .info-image.left, .info-section .info-image.right {
+    clip-path: none;
+  }
+
+  .info-section .row.align-items-center.mb-5.flex-md-row-reverse, 
+  .info-section .row.align-items-center.flex-md-row-reverse {
+    flex-direction: column !important;
+  }
+
+  .info-section .row.align-items-center.mb-5.flex-md-row-reverse .col-md-6,
+  .info-section .row.align-items-center.flex-md-row-reverse .col-md-6 {
+    width: 100%;
+  }
+
+  .info-section .info-image {
+    width: 100%;
+  }
+}
+
+/* Product Overview card becomes vertical at smaller widths */
+@media (max-width: 1200px) {
+  .card-round .row.g-0 {
+    flex-direction: column;
+  }
+
+  .img-round {
+    border-radius: 20px 20px 0 0;
+  }
+
+  .card-round .col-md-6 {
+    width: 100%;
+  }
+
+  .card-round .col-md-6 img {
+    border-radius: 20px 20px 0 0;
+  }
+
+  .card-round .col-md-6:first-child {
+    order: 1;
+  }
+
+  .card-round .col-md-6:last-child {
+    order: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .card-body.text-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .product-img {
+    max-height: none;
+  }
+}
+
+/* Adjust the text height and whitespace for Product Overview */
+.card-body.text-center p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+}
+
+
+
+
+/* ----------------------- Instructions page ----------------------- */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f5f7fa;
+  margin: 0;
+  padding: 0;
+}
+
+/* title text and font style and formatting */
+.title {
+  font-family: 'Lexend Zetta';
+  font-weight: bolder;
+  font-size: 2.5rem;
+  text-decoration: underline;
+  text-shadow: 0 0 20px #5DB7DE;
+}
+
+.con {
+  max-width: 62.5rem; /* 1000px */
+  margin: 0 auto;
+  padding: 1.25rem; /* 20px */
+}
+
+
+/* ----------------------- Timeline ----------------------- */
+.timeline {
+  position: relative;
+  margin: 3.125rem auto; /* Center the timeline with margins */
+  padding: 1.25rem 0; /* Add vertical padding */
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 1.25rem; /* Extend line to near the bottom */
+  left: 50%;
+  width: 0.25rem; /* Set line width */
+  background: var(--medium); /* Use CSS variable for color */
+  transform: translateX(-50%); /* Center the line horizontally */
+}
+
+/* Timeline step styles */
+.timeline-step {
+  position: relative;
+  padding: 1.25rem 0; /* Vertical padding for steps */
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Space out content */
+  margin-bottom: 2.5rem; /* Space between steps */
+}
+
+.timeline-step:nth-child(odd) {
+  flex-direction: row-reverse; /* Reverse order for odd steps */
+}
+
+.timeline-step::before {
+  content: attr(data-step);
+  position: absolute;
+  left: 50%;
+  width: 2.5rem; /* Circle width */
+  height: 2.5rem; /* Circle height */
+  background: var(--medium); /* Circle background color */
+  color: white;
+  border-radius: 50%; /* Make circle */
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center text in circle */
+  transform: translateX(-50%); /* Center circle horizontally */
+  z-index: 1;
+  font-weight: bold;
+  font-size: 1.2em;
+  box-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.1); /* Add shadow */
+}
+
+.timeline-step-content,
+.timeline-step-image {
+  width: 45%; /* Set content width */
+  padding: 1.25rem; /* Inner padding */
+  background: white;
+  border-radius: 0.625rem; /* Rounded corners */
+  box-shadow: 0 0 1.25rem rgba(0, 0, 0, 0.1); /* Add shadow */
+}
+
+.timeline-step-content h3 {
+  font-size: 1.5em; /* Heading size */
+  margin-bottom: 0.625rem; /* Space below heading */
+  color: #333;
+}
+
+.timeline-step-content p {
+  font-size: 1em;
+  color: #666; /* Text color */
+}
+
+.timeline-step-image img {
+  width: 100%; /* Full width image */
+  border-radius: 0.625rem; /* Rounded corners */
+}
+
+@media (max-width: 768px) { /* Styles for smaller screens */
+  .timeline::before {
+    content: none; /* Remove the vertical line */
+  }
+  
+  .timeline-step {
+    flex-direction: column; /* Stack steps vertically */
+    align-items: flex-start;
+    margin-bottom: 1.25rem; /* Reduce space between steps */
+    background: white;
+    border-radius: 0.625rem; /* Rounded corners */
+    box-shadow: 0 0 1.25rem rgba(0, 0, 0, 0.1); /* Add shadow */
+    padding: 1.25rem; /* Inner padding */
+  }
+  
+  .timeline-step:nth-child(even),
+  .timeline-step:nth-child(odd) {
+    flex-direction: column; /* steps stack vertically */
+  }
+  
+  .timeline-step::before {
+    content: none; /* Remove step number circles */
+  }
+  
+  .timeline-step-content,
+  .timeline-step-image {
+      width: 100%; /* Full width content */
+      padding: 0; /* Remove inner padding */
+      box-shadow: none; /* Remove shadow */
+  }
+  
+  .timeline-step-content {
+      margin-bottom: 1.25rem; /* Space below content */
+  }
+  
+  .timeline-step-image img {
+      width: 100%;
+      height: auto; /* responsive images */
+  }
+}
+
+.faq-header {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2em;
+}
+
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px; /* Inner padding */
+  width: 100%;
+  text-align: left;
+  border: none; /* Remove border */
+  outline: none;
+  transition: 0.4s;
+  margin-top: 10px; /* Space between buttons */
+  border-radius: 10px; /* Rounded corners */
+}
+
+.active {
+  background-color: #ccc; /* Active button color */
+}
+
+.panel {
+  padding: 0 18px 10px; /* Inner padding */
+  background-color: white;
+  max-height: 0; /* Initially hidden */
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  border-radius: 0 0 10px 10px; /* Rounded bottom corners */
+}
+
+.faq {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.custom-faq-card {
+  max-width: 700px; /* Control card width */
+  margin: auto; /* Center card */
+  background-color: #fff;
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow */
+  padding: 20px;
+  border: solid 1px #ddd;
+}
+
+.accordion:last-child {
+  border-bottom: 0; /* Remove border for last item */
+}
+
+.accordion::before {
+  content: '\002B'; /* Plus sign */
+  color: #444;
+  font-weight: bold;
+  margin-right: 10px; /* Space before sign */
+}
+
+.active::before {
+  content: '\2212'; /* Minus sign */
+}
+
+.accordion:hover {
+  background-color: #CCCCCC; /* Hover color */
+}
+
+@media (min-width: 769px) { /* Styles for larger screens */
+  .timeline-step {
+      flex-direction: row; /* Horizontal layout */
+      align-items: center;
+      justify-content: space-between; /* Space out content */
+  }
+  
+  .timeline-step:nth-child(odd) {
+      flex-direction: row-reverse; /* Reverse order for odd steps */
+  }
+  
+  .timeline-step-content,
+  .timeline-step-image {
+      width: 45%; /* Set content width */
+      padding: 1.25rem; /* Inner padding */
+  }
+  
+  .timeline-step-content {
+      margin-right: 2rem; /* Space between content and image */
+      margin-left: 2rem;
+  }
+  
+  .timeline-step-image {
+      margin-left: 2rem; /* Space between content and image */
+      margin-right: 2rem;
+  }
+}
+
+.end-circle {
+  width: 3rem;
+  height: 3rem;
+  background-color: var(--medium);
+  color: white;
+  border-radius: 2rem; /* Make circle */
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center text */
+  font-size: 2em;
+  font-weight: bold;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add shadow */
+  margin: -5rem auto; /* Position circle */
+}
+
+@media (max-width: 768px) { /* Hide end circle on small screens */
+  .end-circle {
+    display: none;
+  }
+}
+
+.faq {
+  text-align: center;
+  margin-top: 5rem; /* Add top margin */
+  margin-bottom: 5rem;
+}
+
+.neuron-break {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center content */
+  margin: 2rem 0;
+  position: relative;
+  width: 100%; /* Full width */
+}
+
+.neuron-branch-left,
+.neuron-branch-right {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Space out content */
+  flex-grow: 1;
+  height: 2px;
+  background-color: transparent;
+  position: relative;
+}
+
+.neuron-branch-left::before,
+.neuron-branch-right::before {
+  content: '';
+  height: 2px;
+  background-color: var(--medium); /* Line color */
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%); /* Center vertically */
+  width: 100%; /* Full width line */
+}
+
+.neuron-node {
+  width: 6px;
+  height: 6px;
+  background-color: var(--medium);
+  border-radius: 50%; /* Make circle */
+  z-index: 1;
+}
+
+.neuron-cell {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center content */
+  margin: 0 1rem;
+  position: relative;
+}
+
+.neuron-core {
+  width: 20px;
+  height: 20px;
+  background-color: var(--medium);
+  border-radius: 50%; /* Make circle */
+  position: relative;
+  z-index: 2;
+}
+
+
+
+/* ----------------------- Adding to Bootstrap styles ----------------------- */
+.container {
+  padding: 0 1rem;
+}
+
+.mt-6 {
+  margin-top: 6rem;
+}
+
+.text-gray {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.ghost-btn {
+  padding: 0.375rem 0.75rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.ghost-btn:hover, .ghost-btn:active, .ghost-btn:focus {
+  color: rgba(255, 255, 255, 1) !important;
+}
+
+a {
+  text-decoration: none;
+}
+/* ----------------------- Home ----------------------- */
+.text-four {
+  color: #7492A0;
+}
+
+.text-home {
+  margin-left: 6rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.emg {
+  margin-left: 6rem;
+  width: 10rem;
+}
+
+.right-img {
+  width: 150px; /* Adjust size as needed */
+  height: auto;
+}
+
+.dashboard {
+  display: flex;
+  flex-direction: column;
+}
+
+h3 {
+  font-weight: bold;
+  color: gray;
+}
+
+.home-text {
+  color: #5DB7DE;
+  font-weight: bold;
+}
+
+.card-title {
+  color: var(--medium);
+  font-weight: bold;
+}
+
+.svg-img {
+  margin-right: 6rem;
+  margin-left: 2rem;
+  margin-top: 2rem;
+  max-width: 100%;
+  height: auto;
+}
+
+.chart-card {
+  border-radius: 2rem;
+  background-color: #D5F2FF;
+  width: 100%;
+  padding: 2rem;
+  margin-top: 1rem; /* it has some spacing from the cards */
+}
+
+.card-pr {
+  border-radius: 2rem;
+  background-color: #D5F2FF;
+  width: 100%;
+  max-width: 25rem;
+  height: auto;
+  padding: 2rem;
+}
+
+.profile {
+  width: 10rem;
+  height: 10rem;
+  border-radius: 8rem;
+  background-color: white;
+  margin-top: 2rem;
+}
+
+/* Smaller card style */
+.card-small {
+  border-radius: 1rem;
+  background-color: #D5F2FF;
+  width: 100%;
+  max-width: 15.5rem; /* Adjust the width to fit three cards in one line */
+  padding: 1rem;
+  margin: 0.5rem;
+}
+
+/* Adjust the circle image size */
+.circle-img {
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 2rem;
+  background-color: #4FB2DD;
+}
+
+/* Adjust the health image size */
+.health-img {
+  width: 2rem;
+  height: 2rem;
+}
+
+/* Adjust card title */
+.card-title {
+  color: var(--medium);
+  font-weight: bold;
+  font-size: 1.2rem; /* Adjust font size for smaller cards */
+}
+
+/* Chart card width */
+.chart-card {
+  width: 62vw;
+}
+
+/* Chart wrapper styles */
+#chart-wrapper {
+  margin: auto;
+  padding: 10px;
+  height: 70vh; /* Adjust height if necessary */
+  width: 57vw;
+  min-height: 400px;
+  background-color: whitesmoke !important;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* Data Collection Button Colors */
+.btn-green {
+  background-color: #47c147;
+}
+.btn-green:hover {
+  background-color: #77DD77;
+  color: white;
+}
+.btn-red {
+  background-color: #d53d35;
+}
+.btn-red:hover {
+  background-color: #FF6961;
+  color: white;
+}
+
+
+/* Default layout for wide screens */
+.card-pr {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  width: 100%;
+  max-width: 25rem;
+}
+
+/* Profile picture and name */
+.card-pr .profile {
+  margin-top: 2rem;
+}
+
+/* Container for name */
+.card-pr .container {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+/* Controls container */
+.card-pr .controls-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.card-pr .controls-container > * {
+  margin: 0.5rem 0;
+}
+
+/* Media query for medium screens (profile card adjustments) */
+@media (max-width: 1390px) {
+  .card-pr .profile {
+    margin-top: 2rem;
+    width: 20vw;
+    height: auto;
+  }
+  .svg-img {
+    display: none; /* Hide the image if the screen is too narrow */
+  }
+
+  .card-pr {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%; /* Make the card take full width */
+    max-width: none; /* Remove max-width restriction */
+  }
+
+  .card-pr .profile-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: auto;
+  }
+
+  .card-pr .controls-container {
+    margin-left: 2rem;
+    align-items: flex-start;
+    width: 100%; /* Make the controls container take full width */
+  }
+
+  .card-pr .controls-container > * {
+    width: 100%; /* controls take full width */
+    margin-bottom: 1rem; /* spacing between elements */
+    white-space: normal; /* Allow text to wrap */
+  }
+  .chart-card {
+    width: 95%;
+    max-width: none;
+    order: 3; /* Chart comes after the profile card */
+    margin-top: 1rem; /* Spacing from other elements */
+  }
+
+  #chart-wrapper {
+    width: 95%;
+    max-width: none;
+  }
+
+  .card-small,
+  .chart-card {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* Media query for small screens. Stack Tests, Deviations, and Deviation Rate Cards vertically*/
+@media (max-width: 850px) {
+  .card-small {
+    width: 95%;
+    max-width: none;
+  }
+
+  .chart-card {
+    width: 95%;
+    max-width: none;
+    order: 3; /* the chart comes after the profile card */
+    margin-top: 1rem; /* spacing from other elements */
+  }
+
+  #chart-wrapper {
+    width: 95%;
+    max-width: none;
+  }
+
+  .card-small,
+  .chart-card {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .card-small {
+    margin-top: 1rem; /* spacing between cards */
+  }
+}

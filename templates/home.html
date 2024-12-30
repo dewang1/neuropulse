@@ -1,0 +1,109 @@
+<!--
+    Project Name: Wearable Sensor Group 7: Neuropulse
+    Team Members: Om Agrawal, Derek Wang, Abhinav Kartik, Aaron Rogovoy
+    Date: 6/3/2024
+    Description: Create the user dashboard; includes certain information about their health and the chart for the data
+-->
+
+{% extends "layout.html" %}
+{% block content %}
+
+<!-- Create beginning container; welcome to dashboard-->
+<div class="d-flex container justify-content-between m-5">
+    <div class="container">
+        <h3>Dashboard</h3>
+        <br>
+        <img src="{{url_for('static', filename='img/emg.svg')}}" alt="EMG Icon">
+        <br><br>
+        <!-- Get name from user login -->
+        <h1 class="home-text">Welcome to Your Dashboard, <span id="userDashboardName"></span></h1>
+    </div>
+    <img class="svg-img" src="{{url_for('static', filename='img/meditation_person.svg')}}" alt="Meditation Icon" id="meditationIcon">
+</div>
+
+<div class="d-flex justify-content-start mb-5 mt-2 flex-wrap">
+    <!-- Create profile card-->
+    <div class="card-pr mt-3 m-5">
+        <div class="profile-container">
+            <!-- Placeholder image of user -->
+            <img class="profile" src="{{url_for('static', filename='img/person.jpg')}}" alt="Person">
+            <div class="container mt-5">
+                <h1 class="home-text" id="profileName"></h1>
+            </div>
+        </div>
+
+        <!-- Set up controls on the profile card-->
+        <div class="controls-container">
+            <!-- Pick date for the chart-->
+            <input type="date" id="datePicker" class="form-control">
+            <div id="monthPicker" style="display:none;">
+                <select id="monthSelect" class="form-control"></select>
+                <select id="yearSelect" class="form-control"></select>
+            </div>
+            <div class="m-2"></div>
+            <!-- Monthly view-->
+            <button id="toggleView" class="btn btn-a btn-one">Toggle Monthly View</button>
+            <!-- Start collection button -->
+            <button id="startCollection" class="btn btn-a btn-green">Start Data Collection</button>
+            <!-- Stop collection button -->
+            <button id="stopCollection" class="btn btn-a btn-red">Stop Data Collection</button>
+        </div>
+    </div>
+    
+    
+
+    <!-- Cards and chart -->
+    <div class="d-flex flex-column">
+        <div class="d-flex justify-content-between flex-wrap">
+            <!-- Card 2 -->
+            <div class="card-small m-3">
+                <div class="d-flex justify-content-left container align-items-center">
+                    <div class="d-flex circle-img justify-content-center m-3">
+                        <img src="{{url_for('static', filename='img/health-insurance.png')}}" alt="" class="health-img">
+                    </div>
+                    <!-- Record amount of tests conducted -->
+                    <div class="">
+                        <h2 class="card-title">Tests<br><span id="testsCount">0</span></h2>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="card-small m-3">
+                <div class="d-flex justify-content-left container align-items-center">
+                    <div class="d-flex circle-img justify-content-center m-3">
+                        <img src="{{url_for('static', filename='img/heart-beat.png')}}" alt="" class="health-img">
+                    </div>
+                    <!-- Record amount of deviations; lower than threshold -->
+                    <div class="">
+                        <h3 class="card-title">Deviations<br><span id="deviationsCount">0</span></h3>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="card-small m-3">
+                <div class="d-flex justify-content-left container align-items-center">
+                    <div class="d-flex circle-img justify-content-center m-3">
+                        <img src="{{url_for('static', filename='img/rate.png')}}" alt="" class="health-img">
+                    </div>
+                    <!-- Record rate of deviation -->
+                    <div class="">
+                        <h3 class="card-title">Rate<br><span id="deviationRate">0%</span></h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Chart card -->
+        <div class="chart-card mt-3">
+            <div class="container d-flex overflow-hidden bg-light rounded-4" id="chart-wrapper">
+                <canvas id="myChart"></canvas>
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+<br>
+
+{% endblock content %}

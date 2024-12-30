@@ -1,0 +1,46 @@
+<!--
+  Project Name: Wearable Sensor Group 7: Neuropulse
+  Team Members: Om Agrawal, Derek Wang, Abhinav Kartik, Aaron Rogovoy
+  Date: 6/3/2024
+  Description: Set up the log in page for the user
+-->
+
+{% extends "layout.html" %}
+{% block content %}
+<main class="login">
+    <div class="container">
+      <div class="d-flex justify-content-center">
+        <!-- Login details -->
+        <div class="login-card p-5 my-5">
+          <div>
+            <h4 class="text-center fw-bold">Log in</h4>
+            <br/>
+            <form class="d-flex flex-column gap-2" id="loginForm">
+              <!-- Email -->
+              <div class="form-group">
+                <input type="text" class="form-control" id="email" name="email" placeholder="Email"/>
+              </div>
+              <!-- Password input -->
+              <div class="form-group">
+                <input type="password" class="form-control" id="password" name="password" placeholder="Password"/>
+              </div>
+              <div class="form-check form-switch d-flex align-items-middle gap-2">
+                <input class="form-check-input" type="checkbox" role="switch" id="keepLoggedInSwitch">
+                <!-- Keep me signed in toggle -->
+                <label class="form-check-label w-100" for="keepLoggedInSwitch">Keep me signed in</label>
+              </div>
+              <!-- Redirect to sign up page -->
+              <p class="text-center mt-1">Don't have an account? <a href="{{url_for('signUp')}}">Sign up.</a></p>
+              <div class="text-center">
+                <!-- Log in submit button -->
+                <button type="submit" class="btn btn-dark rounded-pill px-3">
+                  Log in
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+</main>
+{% endblock content%}

@@ -1,0 +1,205 @@
+<!--
+    Project Name: Wearable Sensor Group 7: Neuropulse
+    Team Members: Om Agrawal, Derek Wang, Abhinav Kartik, Aaron Rogovoy
+    Date: 6/3/2024
+    Description: Create a "timeline" for the user instructions on setting up the device
+-->
+
+<!-- Extend the base layout -->
+{% extends "layout.html" %}
+
+<!-- Define the content for the block 'content' in the base layout -->
+{% block content %}
+
+<!-- Main content area -->
+<main>
+    <!-- Container for the instructions title -->
+    <div class="">
+        <!-- Instructions title -->
+        <h1 class="text-two text-center title mt-5">INSTRUCTIONS</h1>
+        <!-- Flex container for centering content -->
+        <div class="d-flex justify-content-center"></div>
+    </div>
+
+    <!-- Container for the timeline -->
+    <div class="con">
+        <!-- Timeline -->
+        <div class="timeline" style="margin-top: -2rem;">
+            <!-- Step 1 -->
+            <div class="timeline-step" data-step="1">
+                <!-- Step 1 content -->
+                <div class="timeline-step-content">
+                    <h3>Step 1</h3>
+                    <p>Strap on the Arduino shell and battery pack to forearm and adjust the straps for tightness</p>
+                </div>
+                <!-- Step 1 image -->
+                <div class="timeline-step-image">
+                    <img src="{{url_for('static', filename='img/image1.jpg')}}" alt="Step 1 Image">
+                </div>
+            </div>
+            <!-- Step 2 -->
+            <div class="timeline-step" data-step="2">
+                <!-- Step 2 content -->
+                <div class="timeline-step-content">
+                    <h3>Step 2</h3>
+                    <p>Peel plastic off three new electrodes and snap them to the muscle sensor. Also, attach new electrode pad to the
+                        purple wire.</p>
+                </div>
+                <!-- Step 2 image -->
+                <div class="timeline-step-image">
+                    <img src="{{url_for('static', filename='img/image2.jpg')}}" alt="Step 2 Image">
+                </div>
+            </div>
+            <!-- Step 3 -->
+            <div class="timeline-step" data-step="3">
+                <!-- Step 3 content -->
+                <div class="timeline-step-content">
+                    <h3>Step 3</h3>
+                    <p>Place the Myoware sensor electrode pads at the indicated locations.</p>
+                </div>
+                <!-- Step 3 image -->
+                <div class="timeline-step-image">
+                    <img src="{{url_for('static', filename='img/image3.jpg')}}" alt="Step 3 Image">
+                </div>
+            </div>
+            <!-- Step 4 -->
+            <div class="timeline-step" data-step="4">
+                <!-- Step 4 content -->
+                <div class="timeline-step-content">
+                    <h3>Step 4</h3>
+                    <p>Plug in the battery pack wire into the Arduino Nano to turn the device on!</p>
+                </div>
+                <!-- Step 4 image -->
+                <div class="timeline-step-image">
+                    <img src="{{url_for('static', filename='img/image4.jpg')}}" alt="Step 4 Image">
+                </div>
+            </div>
+            <!-- Step 5 -->
+            <div class="timeline-step" data-step="5">
+                <!-- Step 5 content -->
+                <div class="timeline-step-content">
+                    <h3>Step 5</h3>
+                    <p>Sign up and log in to your account. Then, click Start Data Collection on the home page. Your sensor is
+                        now recording your nerve's conductivity!</p>
+                </div>
+                <!-- Step 5 image -->
+                <div class="timeline-step-image imageGif">
+                    <img src="{{url_for('static', filename='img/image5.gif')}}" alt="Step 5 Image">
+                </div>
+            </div>
+            <!-- Step 6 -->
+            <div class="timeline-step" data-step="6">
+                <!-- Step 6 content -->
+                <div class="timeline-step-content">
+                    <h3>Step 6</h3>
+                    <p>Continue using the sensor every day. You can view your past data either by choosing a date or month.</p>
+                </div>
+                <!-- Step 6 image -->
+                <div class="timeline-step-image imageGif">
+                    <img src="{{url_for('static', filename='img/image6.gif')}}" alt="Step 6 Image">
+                </div>
+            </div>
+        </div>
+        <!-- End circle with checkmark -->
+        <div class="end-circle"> 
+            <span style="transform: translateX(-5%)">&#10003;</span> 
+        </div>
+    </div>
+
+    <div class="m-5"></div>
+
+    <!-- Create a break (resembles neuron) -->
+    <div class="neuron-break mt-5">
+        <div class="neuron-branch-left">
+            <div class="neuron-node"></div>
+            <div class="neuron-node"></div>
+            <div class="neuron-node"></div>
+        </div>
+        <div class="neuron-cell">
+            <div class="neuron-core"></div>
+        </div>
+        <div class="neuron-branch-right">
+            <div class="neuron-node"></div>
+            <div class="neuron-node"></div>
+            <div class="neuron-node"></div>
+        </div>
+    </div>
+
+    <!-- FAQ section; provide answers for questions about how the sensor works and why it is important -->
+    <section class="faq">
+        <div class="container">
+            <h2 class="heading text-one">FAQ</h2>
+            <div class="card custom-faq-card">
+                <!-- FAQ Item 1 -->
+                <div class="faq-item">
+                    <button class="accordion">Is it easy to use? How long does it take to set up?</button>
+                    <div class="panel">
+                        <br>
+                        <p>It's designed for ease of use and can be set up quickly within minutes. It is lightweight, comfortable,
+                            and can be worn during everyday activities. Our device comes with adjustable straps to ensure a comfortable
+                            and secure fit for everyone.</p>
+                    </div>
+                </div>
+                <!-- FAQ Item 2 -->
+                <div class="faq-item">
+                    <button class="accordion">How has it helped others?</button>
+                    <div class="panel">
+                        <br>
+                        <p>Many users have reported significant benefits from using our device, including early detection of CTS, which
+                            has allowed them to take proactive measures such as ergonomic adjustments and seeking medical attention sooner.
+                            This early intervention has helped prevent further nerve damage, reduce pain, and improve overall hand and
+                            wrist function. Additionally, users appreciate the peace of mind that comes from monitoring their nerve
+                            health daily.</p>
+                    </div>
+                </div>
+                <!-- FAQ Item 3 -->
+                <div class="faq-item">
+                    <button class="accordion">What should I do if the device detects potential CTS symptoms?</button>
+                    <div class="panel">
+                        <br>
+                        <p>If the device detects potential CTS symptoms, we recommend making ergonomic adjustments, reducing repetitive
+                            wrist activities, and seeking medical advice for further evaluation and management.</p>
+                    </div>
+                </div>
+                <!-- FAQ Item 4 -->
+                <div class="faq-item">
+                    <button class="accordion">How often should I wear the device?</button>
+                    <div class="panel">
+                        <br>
+                        <p>For optimal results, we recommend wearing the device daily, especially during activities that involve
+                            repetitive wrist movements.</p>
+                    </div>
+                </div>
+                <!-- FAQ Item 5 -->
+                <div class="faq-item">
+                    <button class="accordion">Can the device be used as a replacement for medical diagnosis?</button>
+                    <div class="panel">
+                        <br>
+                        <p>While our device provides early detection of CTS symptoms, it is not a replacement for a professional medical
+                            diagnosis. If you experience symptoms, we recommend consulting with a healthcare provider.</p>
+                    </div>
+                </div>
+                <!-- FAQ Item 6 -->
+                <div class="faq-item">
+                    <button class="accordion">How soon can I expect to see results?</button>
+                    <div class="panel">
+                        <br>
+                        <p>The device starts monitoring immediately upon use. However, it may take weeks of data to have a
+                            clear understanding of your situtuation.</p>
+                    </div>
+                </div>
+                <!-- FAQ Item 7 -->
+                <div class="faq-item">
+                    <button class="accordion">How do I know if the device is working correctly?</button>
+                    <div class="panel">
+                        <br>
+                        <p>The sensor has an indicator light and the website provides real-time data from the sensor readings.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- End of the content block -->
+{% endblock content %}

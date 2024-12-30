@@ -1,0 +1,19 @@
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-app.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  const firebaseConfig = {
+    apiKey: "AIzaSyDSgK4oXAvW6L-GKt5n7REP-hTSQXc_J78",
+    authDomain: "wearable-sensor-7.firebaseapp.com",
+    projectId: "wearable-sensor-7",
+    storageBucket: "wearable-sensor-7.appspot.com",
+    messagingSenderId: "372835216898",
+    appId: "1:372835216898:web:baec8373660bd9714ec11b"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+</script>

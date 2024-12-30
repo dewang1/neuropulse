@@ -1,0 +1,128 @@
+<!--
+    Project Name: Wearable Sensor Group 7: Neuropulse
+    Team Members: Om Agrawal, Derek Wang, Abhinav Kartik, Aaron Rogovoy
+    Date: 6/3/2024
+    Description: Index page where the user first sees the website; the importance of our sensor, methodology, overview
+-->
+
+{% extends "layout.html" %}
+{% block content %}
+<main>
+    <!-- Hero section -->
+    <section class="hero">
+        <div class="container">
+            <div class="row">
+                <!-- Left column: Heading and buttons -->
+                <div class="col-sm-6 d-flex">
+                    <div class="container">
+                        <h1 class="heading"><span class="text-one">NeuroPulse:</span>
+                                            <span class="text-two">Detect and Prevent Carpal Tunnel Early</span></h1>
+                        <h3 class="subheading text-three">Preventative wearables for a healthier you!</h3>
+                        <!-- Learn More button scrolls down to info section -->
+                        <a href="#info"><button class="btn btn-a btn-one">Learn More</button></a>
+                        <!-- Get Started button redirects to sign up page -->
+                        <a href="{{ url_for('signUp') }}"><button class="btn btn-a btn-two">Get Started</button></a>
+                    </div>
+                </div>
+                <!-- Right column: Image -->
+                <div class="col-sm-6 p-0 d-flex">
+                    <img class="img-right" src="{{url_for('static', filename='/img/tech_circuit.png')}}">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Info section -->
+    <section id="info" class="info-section">
+        <div class="container my-5">
+            <div class="card card-round mx-3">
+                <div class="row g-0">
+                    <!-- Left column: Product image -->
+                    <div class="col-md-6">
+                        <img src="{{url_for('static', filename='/img/image3.jpg')}}" class="img-fluid img-round product-img" alt=".">
+                    </div>
+                    <!-- Right column: Product overview text -->
+                    <div class="col-md-6">
+                        <div class="card-body text-center">
+                            <h3 class="heading text-one mb-4">Product Overview</h3>
+                            <p class="description text-two">Our user-friendly wearable device helps combat carpal tunnel syndrome
+                                                                (CTS) through early detection. An electrode on the forearm outputs
+                                                                electrical signals, which are measured by a Myoware surface
+                                                                electromyography (sEMG) sensor on the hand to sense if CTS is developing.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="info-section">
+        <div class="container my-5">
+            <!-- Row 1 Why? information - Image on left -->
+            <div class="row align-items-center mb-5 flex-column-reverse flex-md-row">
+                <div class="col-md-6 order-md-1">
+                    <img src="{{url_for('static', filename='/img/carpal.jpg')}}" class="info-image left" alt=".">
+                </div>
+                <div class="col-md-6 order-md-2">
+                    <h1 class="heading">Why?</h1>
+                    <p class="description-two">CTS is a condition caused by compression of the median nerve in
+                                                the wrist, often resulting from overuse in activities such as typing and writing,
+                                                leading to pain, numbness, and tingling in the hand and arm.
+                                                
+                                        <br><br>Traditional methods often identify CTS only after symptoms manifest, when
+                                                irreversible damage to the median nerve may have already occurred.
+                                        <br><br>Our device allows early
+                                                detection and intervention, which prevents
+                                                further damage and enables users to adopt ergonomic adjustments and lifestyle modifications,
+                                                or seek medical attention.</p>
+                </div>
+            </div>
+            <!-- Row 2 How? information - Image on right -->
+            <div class="row align-items-center flex-column-reverse flex-md-row">
+                <div class="col-md-6 order-1 order-md-2">
+                    <img src="{{url_for('static', filename='/img/how.png')}}" class="info-image right" alt=".">
+                </div>
+                <div class="col-md-6 order-2 order-md-1">
+                    <h1 class="heading">How?</h1>
+                    <p class="description-two">Our device allows for real-time measurement of median nerve conductivity throughout daily
+                                                activities. Conductivity is measured with an electrode on the forearm that outputs
+                                                electrical signals, which are measured by the sEMG sensor on the hand.
+                                                
+                                        <br><br>Our website displays the data collected in an intuitive
+                                                interface, which can be shared with a medical professional. Individuals can then
+                                                use this information to take proactive measures to mitigate the condition's progression.</p>
+                </div>
+            </div>
+        </div>
+    </section>    
+    <!-- Data information section -->
+    <section>
+        <div class="container my-5">
+            <h1 class="heading text-one text-center">Data</h1>
+            <div class="card card-two">
+                <div class="row g-0 align-items-center">
+                    <!-- Text on the left -->
+                    <div class="col-md-4">
+                        <div class="card-body">
+                            <p class="card-text description">The real-time data from the MyoWare sensor is transmitted to our
+                                                                online platform. The website features an intuitive interface that
+                                                                presents detailed trends and analysis based on
+                                                                the collected data.</p>
+                        </div>
+                    </div>
+                    <!-- Image in the center -->
+                    <div class="col-md-4">
+                        <img src="{{url_for('static', filename='/img/muscle_sensor.jpg')}}" class="card-img-center" alt="Device Image">
+                    </div>
+                    <!-- Text on the right -->
+                    <div class="col-md-4">
+                        <div class="card-body">
+                            <p class="card-text description">Users and their medical professionals can track changes over time,
+                                                                identify potential risk factors, and receive timely alerts or
+                                                                recommendations for preventive measures.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>          
+    </section>
+</main>
+{% endblock content %}

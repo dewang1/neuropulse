@@ -1,0 +1,129 @@
+<!--
+    Project Name: Wearable Sensor Group 7: Neuropulse
+    Team Members: Om Agrawal, Derek Wang, Abhinav Kartik, Aaron Rogovoy
+    Date: 6/3/2024
+    Description: Layout for html pages, including navbar and footer
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap 5 CSS, Icons and custom CSS file links -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" 
+            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" 
+            crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+    <link rel="icon" href="{{url_for('static', filename='/img/logo.ico')}}">
+        {% if title %}
+            <title>NeuroPulse - {{ title }} </title>
+        {% else %}
+            <title>NeuroPulse</title>
+        {% endif %}
+    <title>Document</title>
+    <!-- Bootstrap 5, crypto-js and custom JS script tags-->
+    <!-- Include 'defer' keyword for each to improve loading-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" 
+            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" 
+            crossorigin="anonymous" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js" 
+            defer integrity="sha512-E8QSvWZ0eCLGk4km3hxSsNmGWbLtSCSUcewDQPQWZF6pEU8GlT8a5fF32wOl1i8ftdMhssTrF/OhyGWwonTcXA==" 
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="{{url_for('static', filename='/js/navbar.js')}}" type="module" defer></script>
+    {% if js_file %}
+    <script type="module" src="{{url_for('static', filename='/js/' + js_file + '.js')}}" defer></script>
+    {% endif %}
+    {% if js_file == "home" %}
+    <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
+    <script type="module" src="{{url_for('static', filename='/js/chart.js')}}" defer></script>
+    {% endif %}
+    <script type="module" src="{{url_for('static', filename='/js/navbar.js')}}" defer></script>
+</head>
+<body class="bg-color">
+    <!-- Navigation bar -->
+    <nav
+      class="{{ navbar_class }} navbar navbar-expand-lg navbar-dark nb-background-color"
+      id="mainNav{% block navbarextendid %}{% endblock %}">
+      <!-- lg = large breakpoint, nb-background-color = purple background color -->
+      <div class="container">
+        <div class="brand">
+          <a href="{{url_for('index')}}" class="link">
+            <img
+              src="{{url_for('static', filename='/img/logo.png')}}"
+              alt="NeuroPulse Logo"
+              class="d-inline-block nav-logo"
+            />
+          </a>
+          <a href="{{url_for('index')}}">
+            <h1 class="d-inline-block navbar-text">NeuroPulse</h1>
+          </a>
+        </div>
+
+        <!-- Hamburger Menu Button -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navmenu"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Collapsible navbar menu -->
+        <div class="collapse navbar-collapse" id="navmenu">
+          <!-- Links to hamburger menu button -->
+          <ul class="navbar-nav ms-auto">
+            <!-- ms-auto is margin spacing--> 
+            <li class="nav-item">
+              <a href="{{url_for('about')}}" class="navlink nbMenuItem ">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a href="{{url_for('instructions')}}" class="navlink nbMenuItem">Instructions</a>
+            </li>
+            <li class="nav-item" id="login-link">
+              <a href="{{url_for('logIn')}}" class="navlink nbMenuItem">Log In</a>
+            </li>
+            <li class="nav-item" id="signup-link">
+              <a href="{{url_for('signUp')}}" class="nbMenuItem">
+                <!-- nav-btn = custom class for margin -->
+                <button class="btn signup">Sign Up</button>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    {% block content%}{% endblock %}
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="d-flex flex-column flex-md-row justify-content-between">
+          <div class="w-max-content mx-auto mx-md-0 mb-3 mb-md-0 d-flex align-items-center">
+            <img
+              src="{{url_for('static', filename='/img/logo.png')}}"
+              alt="NeuroPulse Logo"
+              class="d-inline-block footer-logo "
+            />
+            <div class="ml-3">
+              <h1 class="d-inline-block footer-text">NeuroPulse</h1>
+              <p class="text-light opacity-50 mb-0">Copyright © 2024 NeuroPulse</p>
+            </div>
+          </div>
+          <div class="w-max-content d-flex justify-content-end mx-auto mx-md-0 link-container">
+            <!-- List of links in footer -->
+            <ul class="list-inline my-0">
+              <li class="list-inline-item"><a href="{{url_for('index')}}">Home</a></li>
+              <li class="list-inline-item"><a href="{{url_for('about')}}">About Us</a></li>
+              <li class="list-inline-item"><a href="{{url_for('instructions')}}">Instructions</a></li>
+              <li class="list-inline-item"><a href="{{url_for('logIn')}}">Log In</a></li>
+              <li class="list-inline-item"><a href="{{url_for('signUp')}}">Sign Up</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+</body>
+</html>

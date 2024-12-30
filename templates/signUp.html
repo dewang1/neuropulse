@@ -1,0 +1,49 @@
+<!--
+  Project Name: Wearable Sensor Group 7: Neuropulse
+  Team Members: Om Agrawal, Derek Wang, Abhinav Kartik, Aaron Rogovoy
+  Date: 6/3/2024
+  Description: Set up the sign in page for the user if they already ahve an account
+-->
+
+{% extends "layout.html" %}
+{% block content %}
+<main class="login">
+    <div class="container">
+      <div class="d-flex justify-content-center">
+        <!-- Login information goes here -->
+        <div class="login-card p-5 my-5">
+          <div>
+            <h4 class="text-center fw-bold">Sign Up</h4>
+            <br/>
+            <form class="d-flex flex-column gap-2" id="signUpForm">
+              <!-- First name -->
+              <div class="form-group">
+                <input type="text" class="form-control" id="firstName" name="firstName" placeholder="First Name"/>
+              </div>
+              <!-- Last name -->
+              <div class="form-group">
+                <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Last Name"/>
+              </div>
+              <!-- Email -->
+              <div class="form-group">
+                <input type="email" class="form-control" id="email" name="email" placeholder="Email"/>
+              </div>
+              <!-- Password input -->
+              <div class="form-group">
+                <input type="password" class="form-control" id="password" name="password" placeholder="Password"/>
+              </div>
+              <!-- Log in instead of sign up link-->
+              <p class="text-center mt-1">Already have an account? <a href="{{url_for('logIn')}}">Log in.</a></p>
+              <div class="text-center">
+                <!-- Sign up submit button -->
+                <button type="submit" class="btn btn-dark rounded-pill px-3">
+                  Sign Up
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+{% endblock content%}

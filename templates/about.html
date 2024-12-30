@@ -1,0 +1,100 @@
+<!--
+    Project Name: Wearable Sensor Group 7: Neuropulse
+    Team Members: Om Agrawal, Derek Wang, Abhinav Kartik, Aaron Rogovoy
+    Date: 6/3/2024
+    Description: About Us page gives the team mission statement and introduces the group members' responsibilities.
+-->
+
+{% extends "layout.html" %}
+{% set navbar_class = 'about-navbar' %}
+{% block content %}
+<!-- About the team -->
+<main>
+    <div class="top-box">
+        <h1 class="mission">Our primary mission is to revolutionize healthcare through cutting-edge technology. Our objective is to 
+            develop a biomedical wearable sensor that detects carpal tunnel syndrome with unparalleled accuracy and efficiency.</h1>
+        <br>
+        <br>
+        <h1 class="team">Meet The Team</h1>
+        <a href="#about-cards"><i class="bi bi-chevron-down bi-2x arrow"></i></a>
+    </div>
+    <!-- Cards organized in 2 x 2 format-->
+    <div class="row row-cols-1 row-cols-md-2 p-4">
+        <div id="about-cards" class="col">
+            <div class="card about shadow">
+                <div class="row no-gutters">
+                    <div class="col-md-4">
+                        <img src="{{url_for('static', filename='/img/derek.jpg')}}" class="card-img-top cardimg" alt="Derek Wang">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h4 class="card-title heading">Derek Wang</h4>
+                            <h5 class="subheading">Software Engineer: Strategist</h5>
+                            <p class="card-test">Derek focused on the software side of the project, developing the website and Arduino 
+                                code. Derek also helped with brainstorming, planning, and building the sensor. As the strategist, 
+                                Derek helped to manage the team, assigning work evenly and keeping the team on track throughout the 
+                                project. </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card about shadow">
+                <div class="row no-gutters">
+                    <div class="col-md-4">
+                        <img src="{{url_for('static', filename='/img/om.jpg')}}" class="card-img-top cardimg" alt="Om Agrawal">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h4 class="card-title heading">Om Agrawal</h4>
+                            <h5 class="subheading">Software Engineer: Design Engineer</h5>
+                            <p class="card-test">Om focused on the software of the project, working on code for the website and Arduino. 
+                                As the Design Engineer, he worked on planning the design of the website and sensor device and helping 
+                                the team implement his designs. He also helped with brainstorming, planning, and building the sensor.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row row-cols-1 row-cols-md-2 p-4">
+        <div class="col mx-auto">
+            <div class="card about shadow">
+                <div class="row no-gutters">
+                    <div class="col-md-4">
+                        <img src="{{url_for('static', filename='/img/aaron.png')}}" class="card-img-top cardimg" alt="Aaron Rogovoy">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h4 class="card-title heading">Aaron Rogovoy</h4>
+                            <h5 class="subheading">Biomedical Engineer: Documenter</h5>
+                            <p class="card-test">Aaron focused on the medical and engineering side of the project, researching, planning,
+                                 building, and testing the sensor. As the documenter, Aaron recorded notes about research, planning, and 
+                                 designing during the project for meetings.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card about shadow">
+                <div class="row no-gutters">
+                    <div class="col-md-4">
+                        <img src="{{url_for('static', filename='/img/abhinav.jpg')}}" class="card-img-top cardimg" alt="Abhinav Kartik">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h4 class="card-title heading">Abhinav Kartik</h4>
+                            <h5 class="subheading">Biomedical Engineer: Discussion Facilitator</h5>
+                            <p class="card-test">Abhinav focused on the medical and engineering side of the project, researching, 
+                                planning, building, and testing the sensor. As the discussion facilitator, Abhinav planned objectives for
+                                 each meeting and actively supported meeting discussions.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock content%}
