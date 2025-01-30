@@ -1,7 +1,7 @@
 # 2324_Sensor_7
 Wearable Sensor project repository
 
-# Carpal Tunnel Syndrome (CTS) Detection Device & Web App
+# NeuroPulse: Carpal Tunnel Syndrome (CTS) Detection Device & Web App
 
 ## Overview
 This project aims to design, build, and test a device and web application for early detection of Carpal Tunnel Syndrome (CTS). The device performs a nerve conduction study by measuring electrical signals transmitted through the median nerve, using an Arduino, an EMG sensor, and an electrode. The web app provides users with a platform to access and analyze their data securely.
@@ -20,7 +20,6 @@ This project aims to design, build, and test a device and web application for ea
 - **User Authentication**: Allows users to log in and access their personalized data.
 - **Data Visualization**: Displays sensor data through interactive graphs and statistics for analysis.
 
-## Tech Stack
 ### Hardware
 - Arduino
 - EMG Sensor
@@ -28,8 +27,7 @@ This project aims to design, build, and test a device and web application for ea
 - Batteries
 - 3D-Printed Housing
 
-## Setup & Installation
-### Setup
+## Setup
 1. Add correct IPs and network settings in Arduino code and website code
 2. Connect Arduino to computer
 3. Upload the Arduino code to the Arduino.
